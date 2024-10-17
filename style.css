@@ -1,0 +1,193 @@
+/* Pagina index */
+.mainindex {
+    background: linear-gradient(to bottom, #003366, #000000);
+    font-family: 'Roboto', sans-serif;
+    background-image: url('resources/fondo_main.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title img {
+    width: 800px;
+    height: auto;
+  }
+  
+  .subtitle {
+    font-family: 'Press Start 2P', cursive;
+    text-shadow:
+      -4px -4px 0 rgba(0, 0, 0, 0.8), 4px -4px 0 rgba(0, 0, 0, 0.8), -4px 4px 0 rgba(0, 0, 0, 0.8), 4px 4px 0 rgba(0, 0, 0, 0.8), 9px 9px 0 rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 315%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -4.3%;
+    z-index: 1;
+  }
+  
+  .divPVPyPVE {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+  }
+  
+  .buttonPVPyPVE {
+    font-family: 'Press Start 2P', cursive;
+    text-decoration: none;
+    color: white;
+    font-size: 300%;
+    background: linear-gradient(to bottom, #135aa2, #0a1970);
+    margin: 0 7%;
+    padding: 2%;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000;
+  }
+  
+  .buttonPVPyPVE:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .buttonPVPyPVE:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .footerindex {
+    color: white;
+    font-size: 200%;
+    background: linear-gradient(to bottom, #135aa2, #0a1970);
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5%;
+  }
+
+/* Pagina pvp */
+.mainpvp {
+    background: linear-gradient(to bottom, #135aa2, #0a1970);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; 
+    width: 85%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    
+}
+
+.players-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+}
+
+section {
+    background-color: rgba(0, 51, 102, 0.8); 
+    border: 2px solid #00aaff; 
+    border-radius: 15px;
+    padding: 20px;
+    width: 40%;
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.4);
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #00aaff;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #f0f0f0; 
+    text-align: left;
+}
+
+input, select {
+    background-color: #004488; 
+    color: #f0f0f0; 
+    border: 2px solid #00aaff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input:hover, select:hover {
+    background-color: #0055aa; 
+}
+
+option {
+    background-color: #003366; 
+    color: #f0f0f0;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 300px; 
+    height: auto;
+}
+
+.submit-team {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #00aaff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.submit-team:hover {
+    background-color: #0077cc;
+    transform: scale(1.02);
+}
+
+.submit-team:active {
+    background-color: #0055aa;
+    transform: scale(0.95);
+}
+
+
