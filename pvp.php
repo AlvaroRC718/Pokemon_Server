@@ -59,7 +59,7 @@
                     ?>
                 </section>
             </div>
-            <button type="submit" class="submit-team">Listo</button>
+            <button type="submit" class="submit-team"><a href="InfoBatlle.php">Listo</a></button>
         </form>
     </div>
 </body>

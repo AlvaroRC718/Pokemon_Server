@@ -190,4 +190,42 @@ option {
     transform: scale(0.95);
 }
 
+/* Estilo para el jugador 1 */
 
+.player1 {
+  background-color: rgba(102, 0, 0, 0.8);
+  border: 2px solid #ff0000;
+}
+
+.player1 h2 {
+  color: #ff0000;
+}
+
+/* Estilo para el jugador 2 */
+
+.player2 {
+  background-color: rgba(0, 0, 102, 0.8);
+  border: 2px solid #00aaff;
+}
+
+.player2 h2 {
+  color: #00aaff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  font-family: 'Press Start 2P', cursive;
+  color: #f0f0f0;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Hover para resaltar los Pokémon */
+
+ul li:hover {
+  color: #ffff00;
+}
