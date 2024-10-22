@@ -19,32 +19,33 @@
     include "functions.php";
     ?>
     <div class="container">
-        <form action="#" method="post">
+        <form action="fight.php" method="post">
             <div class="players-sections">
-                
-            <div class="icon">
+
+                <div class="icon">
                     <img src='resources/red.png' alt='entrenador2' />
                 </div>
 
-                <section>
-                    <h2>Selecciona tu equipo Pokémon Jugador 1</h2>
+                <section class="singleplayer">
+                    <h2 class="blueh2">Selecciona tu equipo Pokémon:</h2>
 
-                    <label for="player1_name">Introduce tu nombre:</label>
+                    <label for="player1_name" class="blue">Introduce tu nombre:</label>
 
                     <input type="text" name="player1_name" id="player1_name" class="select-input-team" required /><br />
                     <?php
-                    for ($i = 1; $i < 7; $i++) {
+                    for ($i = 1; $i < 7; $i++) { //Hago los print de los option y genero 6 pokemon random para el equipo rival
                         echo "<img src='resources/pokeball2.png' alt='pokeball' width='20px' height='20px'/>";
-                        echo "<label for='pokemon1_$i'> $i º Pokemon</label>
-                        <select name='pokemon1_$i' id='pokemon1_$i' class='select-input-team'>";
-                        print_select_pokemon($array_pokemon); //Funcion del archivo functions.php
+                        echo "<label for='teams[$i]' class='blue'> " . $i . "º Pokemon</label>";
+                        echo "<select name='teams[your_team][]' class='select-input-team'>";
+                        print_select_pokemon($array_pokemon, 'teams[your_team][]'); // Función del archivo functions.php
                         echo "</select><br/>";
+                        echo "<input type='hidden' name='teams[rival_team][]' value=" . mt_rand(0, $array_pokemon_size - 1) . " />"; //Equipo rival random
                     }
                     ?>
                 </section>
 
                 <div class="icon">
-                <img src='resources/Primeape.png' alt='Primeape' />
+                    <img src='resources/Primeape.png' alt='Primeape' />
                 </div>
             </div>
             <button type="submit" class="submit-team">Listo</button>

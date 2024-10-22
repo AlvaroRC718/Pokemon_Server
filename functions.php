@@ -1,17 +1,18 @@
 <?php
 include "DBpokemon.php";
 
+
 //Genera los option de un select segun el array que le des y le aplica un estilo a este
-function print_select_pokemon($array_pokemon)
+function print_select_pokemon($array_pokemon, $trainer)
 {
     $array_pokemon_size = count($array_pokemon);
     $pokemon_random = mt_rand(1, $array_pokemon_size - 1); //pongo pokemon aleatorios, el 0 lo oculto porque es un easter egg
 
-    for ($i = 0; $i < $array_pokemon_size; $i++) {
-        if ($i == $pokemon_random) { //selecciono un pordefecto aleatorio
-            echo "<option value='" . $array_pokemon[$i]["name"] . "' name='select_pokemon' id='" . $array_pokemon[$i]["name"] . "' class='team-option' selected>" . $array_pokemon[$i]["name"] . "</option>";
-        }else{
-            echo "<option value='" . $array_pokemon[$i]["name"] . "' name='select_pokemon' id='" . $array_pokemon[$i]["name"] . "' class='team-option'>" . $array_pokemon[$i]["name"] . "</option>";
+    foreach ($array_pokemon as $index => $pokemon) {
+        if ($index == $pokemon_random) { //selecciono un pordefecto aleatorio
+            echo "<option value='$index' name='$trainer' class='team-option' selected>" . $pokemon['name'] . "</option>";
+        } else {
+            echo "<option value='$index' name='$trainer' class='team-option'>" . $pokemon['name'] . "</option>";
         }
     }
 }
@@ -57,8 +58,11 @@ function color_ps_bar($ps){
     return $color;
 }
 
-function print_select_team($team) {
+function print_select_team($team ,$pokemon_selected) {
     foreach ($team as $index => $pokemon) {
-        echo "<option value='$index' class='fight-option'>".$pokemon['name']."</option>";
+        if ($index != $pokemon_selected) {
+            echo "<option value='$index' class='fight-option'>".$pokemon['name']."</option>";
+        }
+        
     }
 }

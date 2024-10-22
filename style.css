@@ -95,9 +95,9 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  width: 85%;
-  max-width: 1200px;
-  padding: 20px;
+  height: 90%;
+  width: 80%;
+  padding: 1.5%;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
@@ -109,29 +109,37 @@
   justify-content: space-between;
   gap: 50px;
   width: 100%;
+  height: 95%;
 }
 
-section {
+.singleplayer {
   background-color: rgba(0, 51, 102, 0.8);
   border: 2px solid #00aaff;
   border-radius: 15px;
-  padding: 20px;
+  padding: 1.5%;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.4);
+}
+
+.twoplayer {
+  background-color: rgba(0, 51, 102, 0.8);
+  border: 2px solid #00aaff;
+  border-radius: 15px;
+  padding: 1.5%;
   width: 40%;
   box-shadow: 0 0 10px rgba(0, 170, 255, 0.4);
 }
 
-h2 {
+.blue {
   font-family: 'Press Start 2P', cursive;
   color: #00aaff;
-  margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 70%;
 }
 
-label {
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #f0f0f0;
-  text-align: left;
+.blueh2 {
+  font-family: 'Press Start 2P', cursive;
+  color: #00aaff;
+  font-size: 100%;
 }
 
 .select-input-team {
@@ -139,14 +147,13 @@ label {
   color: #f0f0f0;
   border: 2px solid #00aaff;
   border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: 2%;
+  margin-bottom: 3%;
   width: 100%;
-  font-size: 14px;
   box-sizing: border-box;
 }
 
-.select-input-team:hover{
+.select-input-team:hover {
   background-color: #0055aa;
 }
 
@@ -162,7 +169,7 @@ label {
 }
 
 .icon img {
-  width: 300px;
+  width: 75%;
   height: auto;
 }
 
@@ -170,7 +177,7 @@ label {
   font-family: 'Press Start 2P', cursive;
   background-color: #00aaff;
   color: white;
-  padding: 15px 30px;
+  padding: 0.5%;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -193,7 +200,7 @@ label {
 /* Pagina Fight */
 
 .mainfight {
-  background: linear-gradient(to bottom, #003366, #000000);
+  background: linear-gradient(to bottom, #135aa2, #0a1970);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -202,7 +209,8 @@ label {
   padding: 0;
   font-family: 'Press Start 2P', sans-serif;
 }
-.body-battle{
+
+.body-battle {
   display: flex;
   height: 75%;
   background-image: url('resources/CombatePokemon.gif');
@@ -210,26 +218,29 @@ label {
   background-position: center;
 }
 
-.team1{
+.team1 {
   width: 10%;
 }
-.team2{
+
+.team2 {
   width: 10%;
 }
+
 .battlefield {
-  height: 75vh; 
+  height: 75vh;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.pokemon1{
+.pokemon1 {
   width: 100%;
   height: 20%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .pokemon2 {
   width: 100%;
   height: 80%;
@@ -238,14 +249,15 @@ label {
   align-items: center;
 }
 
-.pokemon1-img img{
+.pokemon1-img img {
   padding-left: 70%;
-  width: 250px;
+  width: 32vh;
   height: auto;
 }
+
 .pokemon2-img img {
-  padding-right: 250px;
-  width: 150px;
+  padding-right: 30vh;
+  width: 18vh;
   height: auto;
 }
 
@@ -257,8 +269,9 @@ label {
   border-radius: 10px;
   text-align: left;
   width: 50%;
-  height: 85%;
+  height: 87%;
 }
+
 .healthbar2 {
   background: linear-gradient(to bottom, #fff, #424242);
   border: solid 4px #000;
@@ -275,8 +288,8 @@ label {
   border: solid 5px #000;
   width: 50%;
   background-color: #ccc;
-  height: 10px;
-  margin-top: 5px;
+  height: 1vh;
+  margin-top: 1%;
   border-radius: 5px;
 }
 
@@ -284,6 +297,7 @@ label {
   height: 100%;
   border-radius: 5px;
 }
+
 .hp-bar2 {
   height: 100%;
   border-radius: 5px;
@@ -316,7 +330,7 @@ label {
   box-sizing: border-box;
 }
 
-.chart{
+.chart {
   width: 50%;
   padding: 0.2%;
   background-color: #fff;
@@ -334,9 +348,19 @@ label {
   border: 2px solid #000;
   border-radius: 10px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-.chart2 {  /*Este contenedor tiene doble caja*/
+.action-button:hover {
+  transform: scale(1.01);
+}
+
+.action-button:active {
+  transform: scale(0.98);
+}
+
+.chart2 {
+  /*Este contenedor tiene doble caja*/
   color: #fff;
   width: 100%;
   height: 100%;
@@ -345,11 +369,13 @@ label {
   border-radius: 10px;
   box-sizing: border-box;
 }
+
 .change-pokemon {
-  display: flex; 
-  flex-direction: column; 
-  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
+
 .select-fight,
 .change-button {
   background: linear-gradient(to bottom, #22cf7f, #1b1b1b);
@@ -359,25 +385,61 @@ label {
   border: 2px solid #000;
   border-radius: 10px;
   height: 100%;
-  width: 100%; 
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
+
+.change-button:hover {
+  transform: scale(1.01);
+}
+
+.change-button:active {
+  transform: scale(0.98);
+}
+
 .fight-option {
   background-color: #08a84b;
   color: #f0f0f0;
 }
-.change-button {
-  cursor: pointer;
-}
 
 .run-button {
-  color: #fff;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
-  font-family: 'Press Start 2P', sans-serif;
+  text-align: center;
+  font-size:small;
+  text-decoration: none;
+  color: #fff;
   background: linear-gradient(to bottom, #2b40ff, #1b1b1b);
   border: 2px solid #000;
   border-radius: 10px;
   cursor: pointer;
 }
+.run-button:hover {
+  transform: scale(1.01);
+}
+
+.run-button:active {
+  transform: scale(0.98);
+}
 
 
+/*Te has colado*/
+.alert {
+  background-color: rgba(255, 255, 204, 0.9);
+  border: 2px solid #f1c40f;
+  border-radius: 10px;
+  padding: 1%;
+  text-align: center;
+  margin: 2%;
+  font-size: 150%;
+}
+
+.alert img {
+  width: 30%;
+  margin-bottom: 1%;
+}
