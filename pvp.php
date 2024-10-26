@@ -31,9 +31,9 @@
                     <?php
                     for ($i = 1; $i < 7; $i++) {
                         echo "<img src='resources/pokeball2.png' alt='pokeball' width='20px' height='20px'/>";
-                        echo "<label for='teams[$i]' class='blue'> ". $i ."º Pokemon</label>";
-                        echo "<select name='teams[your_team][]' class='select-input-team'>"; 
-                        print_select_pokemon($array_pokemon,'teams[your_team][]'); // Función del archivo functions.php
+                        echo "<label for='teams[$i]' class='blue'> " . $i . "º Pokemon</label>";
+                        echo "<select name='teams[your_team][]' class='select-input-team'>";
+                        print_select_pokemon($array_pokemon, 'teams[your_team][]'); // Función del archivo functions.php
                         echo "</select><br/>";
                     }
                     ?>
@@ -52,9 +52,9 @@
                     <?php
                     for ($i = 1; $i < 7; $i++) {
                         echo "<img src='resources/pokeball2.png' alt='pokeball' width='20px' height='20px'/>";
-                        echo "<label for='teams[$i]' class='blue'> ". $i ."º Pokemon</label>";
-                        echo "<select name='teams[rival_team][]' class='select-input-team'>"; 
-                        print_select_pokemon($array_pokemon,'teams[rival_team][]'); // Función del archivo functions.php
+                        echo "<label for='teams[$i]' class='blue'> " . $i . "º Pokemon</label>";
+                        echo "<select name='teams[rival_team][]' class='select-input-team'>";
+                        print_select_pokemon($array_pokemon, 'teams[rival_team][]'); // Función del archivo functions.php
                         echo "</select><br/>";
                     }
                     ?>
@@ -63,6 +63,7 @@
             <button type="submit" class="submit-team">Listo</button>
         </form>
     </div>
+    <a href="indextemp.php" class="return-button">Volver</a>
 </body>
 
 </html>

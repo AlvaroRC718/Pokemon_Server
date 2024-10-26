@@ -96,7 +96,7 @@
   justify-content: space-between;
   align-items: stretch;
   height: 90%;
-  width: 80%;
+  width: 70%;
   padding: 1.5%;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 20px;
@@ -108,7 +108,6 @@
   display: flex;
   justify-content: space-between;
   gap: 50px;
-  width: 100%;
   height: 95%;
 }
 
@@ -176,7 +175,7 @@
 .submit-team {
   font-family: 'Press Start 2P', cursive;
   background-color: #00aaff;
-  color: white;
+  color: #fff;
   padding: 0.5%;
   border: none;
   border-radius: 10px;
@@ -193,6 +192,28 @@
 }
 
 .submit-team:active {
+  background-color: #0055aa;
+  transform: scale(0.95);
+}
+.return-button {
+  position: fixed;
+  bottom: 3%;  
+  left: 2%;     
+  z-index: 3;  
+  color: #fff;
+  text-decoration: none;
+  padding: 1.5%;
+  font-family: 'Press Start 2P', sans-serif;
+  background-color: #00aaff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.return-button:hover {
+  background-color: #0077cc;
+  transform: scale(1.02);
+}
+.return-button:active {
   background-color: #0055aa;
   transform: scale(0.95);
 }
@@ -219,11 +240,13 @@
 }
 
 .team1 {
-  width: 10%;
+  width: 9.5%;
+  display: flex;
+  flex-direction: column;
 }
 
 .team2 {
-  width: 10%;
+  width: 9.5%;
 }
 
 .battlefield {
@@ -317,7 +340,7 @@
 .battle-text {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  font-size: 200%;
+  font-size: 150%;
   padding: 1%;
   width: 50%;
   box-sizing: border-box;
@@ -359,6 +382,30 @@
   transform: scale(0.98);
 }
 
+.music-toggle {
+  color: #fff;
+  font-family: 'Press Start 2P', sans-serif;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  box-sizing: border-box;
+  font-size:small;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #cfa122, #1b1b1b);
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: xx-large;
+  cursor: pointer;
+}
+.music-toggle:hover {
+  transform: scale(1.01);
+}
+
+.music-toggle:active {
+  transform: scale(0.98);
+}
 .chart2 {
   /*Este contenedor tiene doble caja*/
   color: #fff;

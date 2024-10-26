@@ -58,6 +58,7 @@ function color_ps_bar($ps){
     return $color;
 }
 
+//Print de los option de tu equipo de valor mando el indice
 function print_select_team($team ,$pokemon_selected) {
     foreach ($team as $index => $pokemon) {
         if ($index != $pokemon_selected) {

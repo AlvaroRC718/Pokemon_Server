@@ -307,7 +307,7 @@ $array_pokemon = [
         "speed" => "10",
         "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/0/02/latest/20140111171426/Machop_XY.gif",
         "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/e/ed/latest/20150321175207/Machop_espalda_G6.gif",
-        "img_pixel" => ""
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/7/70/latest/20091207220251/Machop_icon.gif"
     ],
     [
         "name" => "Bellsprout",
