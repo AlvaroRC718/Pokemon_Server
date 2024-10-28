@@ -42,9 +42,6 @@
             }
         }
 
-        $pokemon_selected = isset($_POST['pokemon_selected']) ? (int)$_POST['pokemon_selected'] : 0; //La primera vez siempre son el 0 si no es el que viene por formulario
-        $pokemon_selected2 = isset($_POST['pokemon_selected2']) ? (int)$_POST['pokemon_selected2'] : 0;
-
         //Preguntar a jose  visto OK
         if (isset($_POST['your_team_json'])) {
             $your_team = json_decode($_POST['your_team_json'], true);
@@ -52,7 +49,10 @@
         if (isset($_POST['rival_team_json'])) {
             $rival_team = json_decode($_POST['rival_team_json'], true);
         }
-        
+
+        $pokemon_selected = isset($_POST['pokemon_selected']) ? (int)$_POST['pokemon_selected'] : 0; //La primera vez siempre son el 0 si no es el que viene por formulario
+        $pokemon_selected2 = isset($_POST['pokemon_selected2']) ? (int)$_POST['pokemon_selected2'] : 0;
+
         $your_pokemon = $your_team[$pokemon_selected];
         $rival_pokemon = $rival_team[$pokemon_selected2];
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Boton de lucha
@@ -121,11 +121,11 @@
                 $your_pokemon['current_ps'] -= attack($rival_pokemon['attack'], $your_pokemon['defense']);
             } else { //Caso debilitado
                 array_splice($your_team, $pokemon_selected, 1);
-                    if ($pokemon_selected < $_POST['index_pokemon_change']) { //Este parche casi me cuesta la vida xd
-                        $pokemon_selected = (int)$_POST['index_pokemon_change'] - 1;
-                    } else {
-                        $pokemon_selected = (int)$_POST['index_pokemon_change']; //Cojo el valor de la posicion
-                    }
+                if ($pokemon_selected < $_POST['index_pokemon_change']) { //Este parche casi me cuesta la vida xd
+                    $pokemon_selected = (int)$_POST['index_pokemon_change'] - 1;
+                } else {
+                    $pokemon_selected = (int)$_POST['index_pokemon_change']; //Cojo el valor de la posicion
+                }
                 $your_pokemon = $your_team[$pokemon_selected];
             }
         }
@@ -169,8 +169,11 @@
                     <div class="healthbar2">
                         <p><img src='resources/pokeball2.png' alt='pokeball' width='20px' height='20px' /> <?php echo $rival_pokemon['name']; ?> Nv5</p>
                         <div>
-                            <div class="health-container">
-                                <div class="hp-bar1" style=" <?php echo "width:" . $rival_health_percentage . "%;" . color_ps_bar($rival_health_percentage); ?>"></div><!--Función del archivo functions.php-->
+                            <div class="ps">
+                                <p>PS</p>
+                                <div class="health-container">
+                                    <div class="hp-bar1" style=" <?php echo "width:" . $rival_health_percentage . "%;" . color_ps_bar($rival_health_percentage); ?>"></div><!--Función del archivo functions.php-->
+                                </div>
                             </div>
                             <p><?php echo $rival_pokemon['current_ps'] . "/" . $rival_pokemon['ps']; ?></p>
                         </div>
@@ -206,8 +209,11 @@
                     <div class="healthbar1">
                         <p><img src='resources/pokeball2.png' alt='pokeball' width='20px' height='20px' /> <?php echo $your_pokemon['name']; ?> Nv5</p>
                         <div>
-                            <div class="health-container">
-                                <div class="hp-bar1" style=" <?php echo "width:" . $your_health_percentage . "%;" . color_ps_bar($your_health_percentage); ?>"></div>
+                            <div class="ps">
+                                <p>PS</p>
+                                <div class="health-container">
+                                    <div class="hp-bar1" style=" <?php echo "width:" . $your_health_percentage . "%;" . color_ps_bar($your_health_percentage); ?>"></div>
+                                </div>
                             </div>
                             <p><?php echo $your_pokemon['current_ps'] . "/" . $your_pokemon['ps']; ?></p>
                         </div>
@@ -238,19 +244,20 @@
         </div>
 
         <div class="battle-menu">
-
-            <div class="battle-text">
-                <?php
-                if ($message_log) {
-                    echo "<p>$message_log</p>";
-                } elseif ($your_pokemon['current_ps'] <= 0) {
-                    echo "<p>¡" . $your_pokemon['name'] . " se ha debilitado!</p>";
-                } elseif ($rival_pokemon['current_ps'] <= 0) {
-                    echo "<p>¡" . $rival_pokemon['name'] . " se ha debilitado!</p>";
-                } else {
-                    echo "<p>¿Qué hará " . $your_pokemon['name'] . "?</p>";
-                }
-                ?>
+            <div class="battle-log">
+                <div class="battle-text">
+                    <?php
+                    if ($message_log) {
+                        echo "<p>$message_log</p>";
+                    } elseif ($your_pokemon['current_ps'] <= 0) {
+                        echo "<p>¡" . $your_pokemon['name'] . " se ha debilitado!</p>";
+                    } elseif ($rival_pokemon['current_ps'] <= 0) {
+                        echo "<p>¡" . $rival_pokemon['name'] . " se ha debilitado!</p>";
+                    } else {
+                        echo "<p>¿Qué hará " . $your_pokemon['name'] . "?</p>";
+                    }
+                    ?>
+                </div>
             </div>
 
             <form action="#" method="post" class="battle-options">
@@ -271,10 +278,7 @@
                 </div>
 
                 <div class="chart">
-                    <button id="music_button" class="music-toggle" class="chart3" onclick="control_music()"> 🔇</button>
-                    <audio id="music" loop>
-                        <source src="resources/battle.mp3" type="audio/mpeg">
-                    </audio>
+                    <a class="music-toggle">🔇</a>
                 </div>
 
                 <div class="chart">
@@ -288,6 +292,8 @@
                             echo "</select>";
                             if ($battle_state && $size_your_team > 1) {
                                 echo "<button type='submit' name='change' class='change-button'>Cambiar Pokémon</button>";
+                            } else {
+                                echo "<button name='change' class='change-button' disabled>Cambiar Pokémon</button>";
                             }
                             ?>
 
@@ -297,49 +303,117 @@
                 </div>
 
                 <div class="chart">
-
-                    <a href="indextemp.php" class="run-button"><?php echo $battle_state ? "Huir" : "Salir"; ?></a>
+                    <a href="index.php" class="run-button"><?php echo $battle_state ? "Huir" : "Salir"; ?></a>
                 </div>
             </form>
 
         </div>
 
-        <script>
-            // Musica en combate
-            const music_button = document.getElementById("music_button");
-            const music = document.getElementById("music");
+        <!--Sonido con JavaScript-->
+        <audio id="clickSound">
+            <source src='resources/sound.mp3' type='audio/mpeg'>
+        </audio>
 
+        <audio id="changeSound">
+            <source src='resources/change.mp3' type='audio/mpeg'>
+        </audio>
+
+        <audio id="runSound">
+            <source src='resources/run.mp3' type='audio/mpeg' />
+        </audio>
+
+        <audio id="backgroundMusic" loop>
+            <?php if (($your_pokemon['current_ps'] == 0 || $rival_pokemon['current_ps'] == 0) && !$battle_state): //Cambio a music de victoria
+            ?>
+                <source src='resources/victory.mp3' type='audio/mpeg'>
+            <?php else: ?>
+                <source src='resources/battle.mp3' type='audio/mpeg'>
+            <?php endif; ?>
+        </audio>
+
+
+        <script>
+            //Botones
+            const submitButton = document.querySelector(".action-button");
+            const changeButton = document.querySelector(".change-button");
+            const returnButton = document.querySelector(".run-button");
+            const musicButton = document.querySelector(".music-toggle");
+            //Sonidos
+            const clickSound = document.getElementById("clickSound");
+            const changeSound = document.getElementById("changeSound");
+            const runSound = document.getElementById("runSound");
+            const backgroundMusic = document.getElementById("backgroundMusic");
             const isMusicPlaying = localStorage.getItem("musicPlaying") === "true";
             const savedTime = parseFloat(localStorage.getItem("musicTime")) || 0; //Tiempo inicial
 
-            function updateButtonIcon() {
-                music_button.textContent = music.paused ? "🔇" : "🔊";
+            //Funciones
+            function updateMusicIcon() { //Cambio de icono del boton
+                musicButton.textContent = backgroundMusic.paused ? "🔇" : "🔊";
             }
 
-            // Funcion del boton
-            function control_music() {
-                if (music.paused) {
-                    music.play();
+            function toggleMusic() {
+                if (backgroundMusic.paused) { //flipflop musica
+                    backgroundMusic.play();
                     localStorage.setItem("musicPlaying", "true");
                 } else {
-                    music.pause();
+                    backgroundMusic.pause();
                     localStorage.setItem("musicPlaying", "false");
                 }
-                updateButtonIcon();
+                updateMusicIcon();
             }
-
-            // Guardo el tiempo de reproduccion cada segundo
-            music.addEventListener("timeupdate", () => {
-                localStorage.setItem("musicTime", music.currentTime);
-            });
-
             // Si cargo y esta la musica activada
             if (isMusicPlaying) {
                 //Continuo la cancion en el segundo que me quede el 0.25 es un filtro que me he inventado para que se note menos el corte
-                music.currentTime = savedTime + 0.25;
-                music.play();
+                backgroundMusic.currentTime = savedTime + 0.25;
+                backgroundMusic.play();
             }
-            updateButtonIcon();
+            updateMusicIcon();
+
+            // Guardo el tiempo de reproduccion cada segundo
+            backgroundMusic.addEventListener("timeupdate", () => {
+                localStorage.setItem("musicTime", backgroundMusic.currentTime);
+            });
+
+            //Al hacer click reproduce el sonido boton atacar
+            submitButton.addEventListener("click", () => {
+                if (!backgroundMusic.paused) { //Si tengo musica
+                    clickSound.play();
+                }
+                submit();
+            });
+
+            //Al hacer click reproduce el sonido boton cambiar
+            changeButton.addEventListener("click", () => {
+                if (!backgroundMusic.paused) { //Si tengo musica
+                    changeSound.play();
+                    changeSound.onended = () => { //Espero a que termine
+                        submit();
+                    };
+                }
+                submit();
+            });
+
+            //Al hacer click reproduce el sonido boton huir
+            returnButton.addEventListener("click", (event) => {
+                event.preventDefault(); // Evita el redireccionamiento inmediato
+                if (!backgroundMusic.paused) { //Si tengo musica
+                    if (returnButton.textContent === "Salir") {
+                        clickSound.play();
+                        clickSound.onended = () => {
+                            window.location.href = returnButton.href;
+                        };
+                    } else {
+                        runSound.play();
+                        runSound.onended = () => {
+                            window.location.href = returnButton.href;
+                        };
+                    }
+                } else {
+                    window.location.href = returnButton.href;
+                }
+            });
+
+            musicButton.addEventListener("click", toggleMusic);
         </script>
 
     <?php else: ?>

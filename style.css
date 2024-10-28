@@ -33,14 +33,14 @@
   z-index: 1;
 }
 
-.divPVPyPVE {
+.divPVPandPVE {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 8%;
 }
 
-.buttonPVPyPVE {
+.buttonPVPandPVE {
   font-family: 'Press Start 2P', cursive;
   text-decoration: none;
   color: white;
@@ -56,16 +56,25 @@
   text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000;
 }
 
-.buttonPVPyPVE:hover {
+.buttonPVPandPVE:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
-.buttonPVPyPVE:active {
+.buttonPVPandPVE:active {
   transform: scale(0.95);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
-
+.music-button {
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  z-index: 3;
+  font-size: xx-large;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 .footerindex {
   color: white;
   font-size: 200%;
@@ -78,7 +87,7 @@
   padding: 0.5%;
 }
 
-/* Pagina pvp */
+/* Pagina pvp y pve*/
 .mainpvp {
   background: linear-gradient(to bottom, #135aa2, #0a1970);
   font-family: 'Roboto', sans-serif;
@@ -175,6 +184,7 @@
 .submit-team {
   font-family: 'Press Start 2P', cursive;
   background-color: #00aaff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   color: #fff;
   padding: 0.5%;
   border: none;
@@ -204,6 +214,7 @@
   text-decoration: none;
   padding: 1.5%;
   font-family: 'Press Start 2P', sans-serif;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   background-color: #00aaff;
   border: none;
   border-radius: 8px;
@@ -240,13 +251,15 @@
 }
 
 .team1 {
-  width: 9.5%;
+  margin-left: 0.5%;
+  width: 9%;
   display: flex;
   flex-direction: column;
 }
 
 .team2 {
-  width: 9.5%;
+  margin-left: 0.5%;
+  width: 9%;
 }
 
 .battlefield {
@@ -289,27 +302,48 @@
   border: solid 4px #000;
   padding: 0.5%;
   margin-bottom: 10%;
+  margin-right: 5%;
   border-radius: 10px;
   text-align: left;
-  width: 50%;
-  height: 87%;
+  width: 28%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .healthbar2 {
   background: linear-gradient(to bottom, #fff, #424242);
   border: solid 4px #000;
-  margin-left: 2%;
+  margin-left: 7%;
   padding: 0.5%;
   margin-bottom: 10%;
   border-radius: 10px;
   text-align: left;
-  width: 50%;
-  height: 22%;
+  width: 28%;
+  height: 25%;
+  box-sizing: border-box;
 }
 
+.ps{
+  display: flex;
+}
+.ps p{
+  color: #dbb623;
+  font-size: 80%;
+  margin-top: 1%;
+  margin-right: -0.8%;
+  padding-left: 0.8%;
+  padding-right: 0.5%;
+  padding-top: 0.8%;
+  padding-bottom: 0.5%;
+  border-radius: 5px;
+  background-color: #000;
+}
+.ps ~ p{
+  margin: 0%;
+}
 .health-container {
   border: solid 5px #000;
-  width: 50%;
+  width: 70%;
   background-color: #ccc;
   height: 1vh;
   margin-top: 1%;
@@ -326,7 +360,6 @@
   border-radius: 5px;
 }
 
-
 .battle-menu {
   background: linear-gradient(to bottom, #89898a, #1b1b1b);
   border: 4px solid #000;
@@ -335,15 +368,33 @@
   flex-direction: wrap;
   height: 25%;
   padding: 0.5%;
+  gap: 0.5%;
+}
+.battle-log{
+  border-radius: 10px;
+  border: solid 8px #000;
+  width: 50%;
+  padding: 0.2%;
+  background-color: #cfa122;
+  box-sizing: border-box;
 }
 
 .battle-text {
   background-color: rgba(255, 255, 255, 0.8);
+  border: solid #424242;
   border-radius: 10px;
+  border-right: 20px solid #424242;
+  border-left: 20px solid #424242;
+  border-top: 10px solid #424242;
+  border-bottom: 10px solid #424242;
   font-size: 150%;
   padding: 1%;
-  width: 50%;
+  height: 100%;
   box-sizing: border-box;
+}
+
+.battle-text p{
+  margin: 0.5%;
 }
 
 .battle-options {
@@ -364,6 +415,7 @@
 
 .action-button {
   color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   width: 100%;
   height: 100%;
   font-family: 'Press Start 2P', sans-serif;
@@ -396,7 +448,7 @@
   border: 2px solid #000;
   border-radius: 10px;
   box-sizing: border-box;
-  font-size: xx-large;
+  font-size: x-large;
   cursor: pointer;
 }
 .music-toggle:hover {
@@ -427,6 +479,7 @@
 .change-button {
   background: linear-gradient(to bottom, #22cf7f, #1b1b1b);
   color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   font-family: 'Press Start 2P', sans-serif;
   text-align: center;
   border: 2px solid #000;
@@ -447,7 +500,8 @@
 
 .fight-option {
   background-color: #08a84b;
-  color: #f0f0f0;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .run-button {
@@ -461,6 +515,7 @@
   font-size:small;
   text-decoration: none;
   color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   background: linear-gradient(to bottom, #2b40ff, #1b1b1b);
   border: 2px solid #000;
   border-radius: 10px;

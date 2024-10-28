@@ -63,7 +63,71 @@
             <button type="submit" class="submit-team">Listo</button>
         </form>
     </div>
-    <a href="indextemp.php" class="return-button">Volver</a>
+    <a href="index.php" class="return-button">Volver</a>
+
+    <!--Sonido con JavaScript-->
+    <audio id="clickSound">
+        <source src="resources/sound.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-button" class="music-button">🔇</button>
+    <audio id="backgroundMusic" loop>
+        <source src="resources/pvpandpve.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        //Botones
+        const submitButton = document.querySelector(".submit-team");
+        const returnButton = document.querySelector(".return-button");
+        const musicButton = document.getElementById("music-button");
+        //audio
+        const clickSound = document.getElementById("clickSound");
+        const backgroundMusic = document.getElementById("backgroundMusic");
+        const isMusicPlaying = localStorage.getItem("musicPlaying") === "true";
+
+        //Funciones
+        function updateMusicIcon() { //Cambio de icono del boton
+            musicButton.textContent = backgroundMusic.paused ? "🔇" : "🔊";
+        }
+
+        function toggleMusic() {
+            backgroundMusic.currentTime = 0;
+            if (backgroundMusic.paused) { //Un flipflop de la musica
+                backgroundMusic.play();
+                localStorage.setItem("musicPlaying", "true");
+            } else {
+                backgroundMusic.pause();
+                localStorage.setItem("musicPlaying", "false");
+            }
+            updateMusicIcon(); //Cambio de icono del boton
+        }
+
+        if (isMusicPlaying) {
+            backgroundMusic.play();
+        }
+        updateMusicIcon();
+
+        //Evento boton enviar
+        submitButton.addEventListener("click", () => {
+            if (!backgroundMusic.paused) { //Si tengo musica
+                clickSound.play();
+            }
+            if (checkValidity()) { //Siempre check de los campos obligatorios
+                submit();
+            }
+        });
+
+        //Evento enlace volver
+        returnButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (!backgroundMusic.paused) { //Si tengo musica
+                clickSound.play();
+            }
+            window.location.href = returnButton.href;
+        });
+
+        musicButton.addEventListener("click", toggleMusic);
+    </script>
 </body>
 
 </html>

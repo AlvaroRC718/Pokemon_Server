@@ -376,7 +376,7 @@ $array_pokemon = [
         "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/1/15/latest/20091207220416/Magnemite_icon.gif"
     ],
     [
-        "name" => "Farfetch'd",
+        "name" => "Farfetchd", //Farfetch'd es uno de los bugg mas complicado porque la comilla simple de su nombre rompia el json
         "ps" => "22",
         "current_ps" => "22",
         "attack" => "13",
