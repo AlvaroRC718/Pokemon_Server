@@ -121,7 +121,7 @@ $array_pokemon = [
         "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/7/72/latest/20140805142147/Pikachu_XY.gif",
         "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/2/2d/latest/20150321173635/Pikachu_espalda_G6.gif",
         "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/b/bf/latest/20081214235115/Pikachu_icon.gif"
-    ],////////////////////////////////
+    ],
     [
         "name" => "Sandshrew",
         "ps" => "22",
@@ -307,7 +307,7 @@ $array_pokemon = [
         "speed" => "10",
         "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/0/02/latest/20140111171426/Machop_XY.gif",
         "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/e/ed/latest/20150321175207/Machop_espalda_G6.gif",
-        "img_pixel" => ""
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/7/70/latest/20091207220251/Machop_icon.gif"
     ],
     [
         "name" => "Bellsprout",
@@ -373,10 +373,10 @@ $array_pokemon = [
         "speed" => "11",
         "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/b/b7/latest/20140214053918/Magnemite_XY.gif",
         "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/d/d2/latest/20150321175335/Magnemite_espalda_G6.gif",
-        "img_pixel" => ""
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/1/15/latest/20091207220416/Magnemite_icon.gif"
     ],
     [
-        "name" => "Farfetch'd",
+        "name" => "Farfetchd", //Farfetch'd es uno de los bugg mas complicado porque la comilla simple de su nombre rompia el json
         "ps" => "22",
         "current_ps" => "22",
         "attack" => "13",
@@ -384,7 +384,7 @@ $array_pokemon = [
         "speed" => "12",
         "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/4/4b/latest/20140402231110/Farfetch%27d_XY.gif",
         "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/0/03/latest/20150321172423/Farfetch%27d_espalda_G6.gif",
-        "img_pixel" => ""
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/1/11/latest/20091207220532/Farfetch%27d_icon.gif"
     ],
     [
         "name" => "Doduo",
@@ -395,7 +395,7 @@ $array_pokemon = [
         "speed" => "15",
         "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/4/4c/latest/20140402231109/Doduo_XY.gif",
         "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/d/df/latest/20150321171155/Doduo_espalda_G6.gif",
-        "img_pixel" => ""
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/c/c4/latest/20091207220532/Doduo_icon.gif"
     ],
     [
         "name" => "Seel",
@@ -406,7 +406,7 @@ $array_pokemon = [
         "speed" => "9",
         "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/6/6f/latest/20140111192641/Seel_XY.gif",
         "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/c/c2/latest/20150321182248/Seel_espalda_G6.gif",
-        "img_pixel" => ""
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/0/0d/latest/20091207220551/Seel_icon.gif"
     ],
     [
         "name" => "Grimer",
@@ -417,7 +417,7 @@ $array_pokemon = [
         "speed" => "8",
         "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/8/8f/latest/20140111123143/Grimer_XY.gif",
         "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/4/49/latest/20150321173432/Grimer_espalda_G6.gif",
-        "img_pixel" => ""
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/7/7c/latest/20091207220533/Grimer_icon.gif"
     ],
     [
         "name" => "Shellder",
@@ -428,7 +428,7 @@ $array_pokemon = [
         "speed" => "10",
         "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/c/ce/latest/20140214193735/Shellder_XY.gif",
         "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/e/e8/latest/20140122210241/Shellder_espalda_G6.gif",
-        "img_pixel" => ""
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/d/dd/latest/20091207220534/Shellder_icon.gif"
     ],
     [
         "name" => "Gastly",
@@ -439,7 +439,381 @@ $array_pokemon = [
         "speed" => "10",
         "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/3/31/latest/20140111115039/Gastly_XY.gif",
         "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/2/22/latest/20150321172956/Gastly_espalda_G6.gif",
-        "img_pixel" => ""
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/1/1e/latest/20091207220535/Gastly_icon.gif"
+    ],
+    [
+        "name" => "Onix",
+        "ps" => "16",
+        "current_ps" => "16",
+        "attack" => "8",
+        "defense" => "20",
+        "speed" => "11",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/3/33/latest/20140214193901/Onix_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/5/51/latest/20140119192846/Onix_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/3/32/latest/20091207222609/Onix_icon.gif"
+    ],
+    [
+        "name" => "Drowzee",
+        "ps" => "21",
+        "current_ps" => "21",
+        "attack" => "8",
+        "defense" => "9",
+        "speed" => "7",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/8/8a/latest/20140214193940/Drowzee_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/c/c5/latest/20150321171328/Drowzee_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/8/89/latest/20091207222610/Drowzee_icon.gif"
+    ],
+    [
+        "name" => "Krabby",
+        "ps" => "19",
+        "current_ps" => "19",
+        "attack" => "16",
+        "defense" => "10",
+        "speed" => "9",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/e/ec/latest/20140111165352/Krabby_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/0/0b/latest/20140112165103/Krabby_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/6/68/latest/20091207222612/Krabby_icon.gif"
+    ],
+    [
+        "name" => "Voltorb",
+        "ps" => "17",
+        "current_ps" => "17",
+        "attack" => "9",
+        "defense" => "8",
+        "speed" => "17",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/9/9a/latest/20140111205732/Voltorb_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/a/ab/latest/20150321191741/Voltorb_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/f/f5/latest/20091207222613/Voltorb_icon.gif"
+    ],
+    [
+        "name" => "Exeggcute",
+        "ps" => "20",
+        "current_ps" => "20",
+        "attack" => "10",
+        "defense" => "10",
+        "speed" => "10",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/3/32/latest/20140111112718/Exeggcute_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/1/19/latest/20150321172410/Exeggcute_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/7/75/latest/20091207222614/Exeggcute_icon.gif"
+    ],
+    [
+        "name" => "Cubone",
+        "ps" => "19",
+        "current_ps" => "19",
+        "attack" => "11",
+        "defense" => "12",
+        "speed" => "8",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/6/62/latest/20140110185305/Cubone_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/b/b9/latest/20150321170715/Cubone_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/2/2b/latest/20091207222755/Cubone_icon.gif"
+    ],
+    [
+        "name" => "Hitmonlee",
+        "ps" => "19",
+        "current_ps" => "19",
+        "attack" => "17",
+        "defense" => "8",
+        "speed" => "14",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/8/87/latest/20140111150517/Hitmonlee_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/6/6b/latest/20140112115134/Hitmonlee_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/1/18/latest/20091207222755/Hitmonlee_icon.gif"
+    ],
+    [
+        "name" => "Hitmonchan",
+        "ps" => "19",
+        "current_ps" => "19",
+        "attack" => "15",
+        "defense" => "12",
+        "speed" => "11",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/9/98/latest/20140111150517/Hitmonchan_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/c/c9/latest/20140112114118/Hitmonchan_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/1/1d/latest/20091207222756/Hitmonchan_icon.gif"
+    ],
+    [
+        "name" => "Lickitung",
+        "ps" => "24",
+        "current_ps" => "24",
+        "attack" => "9",
+        "defense" => "12",
+        "speed" => "7",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/9/9a/latest/20140809161850/Lickitung_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/3/35/latest/20150321174704/Lickitung_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/7/70/latest/20091207222756/Lickitung_icon.gif"
+    ],
+    [
+        "name" => "Koffing",
+        "ps" => "22",
+        "current_ps" => "22",
+        "attack" => "11",
+        "defense" => "15",
+        "speed" => "6",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/d/d5/latest/20140111165348/Koffing_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/3/32/latest/20150321174256/Koffing_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/3/35/latest/20091207222756/Koffing_icon.gif"
+    ],
+    [
+        "name" => "Rhyhorn",
+        "ps" => "21",
+        "current_ps" => "21",
+        "attack" => "15",
+        "defense" => "13",
+        "speed" => "7",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/2/29/latest/20140111191257/Rhyhorn_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/4/49/latest/20140119220432/Rhyhorn_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/8/8a/latest/20091207222757/Rhyhorn_icon.gif"
+    ],
+    [
+        "name" => "Chansey",
+        "ps" => "30",
+        "current_ps" => "30",
+        "attack" => "5",
+        "defense" => "5",
+        "speed" => "9",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/2/26/latest/20140109174502/Chansey_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/9/95/latest/20140112100924/Chansey_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/2/2f/latest/20091207222757/Chansey_icon.gif"
+    ],
+    [
+        "name" => "Tangela",
+        "ps" => "22",
+        "current_ps" => "22",
+        "attack" => "10",
+        "defense" => "13",
+        "speed" => "9",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/3/34/latest/20140111210920/Tangela_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/2/24/latest/20150321183347/Tangela_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/3/3a/latest/20091207222936/Tangela_icon.gif"
+    ],
+    [
+        "name" => "Kangaskhan",
+        "ps" => "24",
+        "current_ps" => "24",
+        "attack" => "14",
+        "defense" => "11",
+        "speed" => "11",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/5/54/latest/20140214194313/Kangaskhan_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/0/02/latest/20150321174112/Kangaskhan_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/b/b2/latest/20091207222911/Kangaskhan_icon.gif"
+    ],
+    [
+        "name" => "Horsea",
+        "ps" => "18",
+        "current_ps" => "18",
+        "attack" => "9",
+        "defense" => "8",
+        "speed" => "12",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/2/2d/latest/20140111154114/Horsea_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/8/87/latest/20140112120639/Horsea_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/f/fb/latest/20091207222912/Horsea_icon.gif"
+    ],
+    [
+        "name" => "Goldeen",
+        "ps" => "20",
+        "current_ps" => "20",
+        "attack" => "12",
+        "defense" => "10",
+        "speed" => "12",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/8/85/latest/20140809162302/Goldeen_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/5/5e/latest/20150321173244/Goldeen_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/8/89/latest/20091207222913/Goldeen_icon.gif"
+    ],
+    [
+        "name" => "Staryu",
+        "ps" => "19",
+        "current_ps" => "19",
+        "attack" => "11",
+        "defense" => "10",
+        "speed" => "16",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/5/59/latest/20140111204726/Staryu_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/c/c9/latest/20150321182849/Staryu_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/6/68/latest/20091207222914/Staryu_icon.gif"
+    ],
+    [
+        "name" => "Mr. Mime",
+        "ps" => "20",
+        "current_ps" => "20",
+        "attack" => "12",
+        "defense" => "9",
+        "speed" => "14",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/f/f0/latest/20140809162513/Mr._Mime_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/7/7e/latest/20150321180646/Mr._Mime_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/e/ee/latest/20091207222915/Mr._Mime_icon.gif"
+    ],
+    [
+        "name" => "Scyther",
+        "ps" => "20",
+        "current_ps" => "20",
+        "attack" => "15",
+        "defense" => "10",
+        "speed" => "16",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/3/3e/latest/20140111192640/Scyther_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/5/50/latest/20140122175710/Scyther_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/1/1a/latest/20091207222915/Scyther_icon.gif"
+    ],
+    [
+        "name" => "Jynx",
+        "ps" => "18",
+        "current_ps" => "18",
+        "attack" => "14",
+        "defense" => "8",
+        "speed" => "15",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/b/b0/latest/20140111163912/Jynx_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/8/8f/latest/20140112165101/Jynx_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/4/40/latest/20091207224827/Jynx_icon.gif"
+    ],
+    [
+        "name" => "Electabuzz",
+        "ps" => "19",
+        "current_ps" => "19",
+        "attack" => "13",
+        "defense" => "10",
+        "speed" => "15",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/b/b1/latest/20140111110703/Electabuzz_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/0/0d/latest/20150321172232/Electabuzz_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/5/5d/latest/20091207224828/Electabuzz_icon.gif"
+    ],
+    [
+        "name" => "Magmar",
+        "ps" => "21",
+        "current_ps" => "21",
+        "attack" => "14",
+        "defense" => "10",
+        "speed" => "13",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/5/59/latest/20140111171431/Magmar_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/9/92/latest/20150321175308/Magmar_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/0/0a/latest/20091207224828/Magmar_icon.gif"
+    ],
+    [
+        "name" => "Pinsir",
+        "ps" => "21",
+        "current_ps" => "21",
+        "attack" => "16",
+        "defense" => "11",
+        "speed" => "12",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/2/24/latest/20140215200028/Pinsir_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/a/a3/latest/20150321181327/Pinsir_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/5/57/latest/20091207224828/Pinsir_icon.gif"
+    ],
+    [
+        "name" => "Tauros",
+        "ps" => "22",
+        "current_ps" => "22",
+        "attack" => "17",
+        "defense" => "12",
+        "speed" => "15",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/3/35/latest/20140111210924/Tauros_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/a/a5/latest/20150321183421/Tauros_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/9/9c/latest/20091207224828/Tauros_icon.gif"
+    ],
+    [
+        "name" => "Magikarp",
+        "ps" => "15",
+        "current_ps" => "15",
+        "attack" => "5",
+        "defense" => "8",
+        "speed" => "10",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/0/07/latest/20140809163050/Magikarp_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/b/b3/latest/20150321175248/Magikarp_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/4/49/latest/20091207224846/Magikarp_icon.gif"
+    ],
+    [
+        "name" => "Lapras",
+        "ps" => "25",
+        "current_ps" => "25",
+        "attack" => "14",
+        "defense" => "15",
+        "speed" => "12",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/3/34/latest/20140809163124/Lapras_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/8/8a/latest/20150321174513/Lapras_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/c/c0/latest/20081118234930/Lapras_icon.gif"
+    ],
+    [
+        "name" => "Ditto",
+        "ps" => "18",
+        "current_ps" => "18",
+        "attack" => "13",
+        "defense" => "11",
+        "speed" => "10",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/d/d1/latest/20140214052853/Ditto_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/5/51/latest/20150321171123/Ditto_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/6/6d/latest/20091207224829/Ditto_icon.gif"
+    ],
+    [
+        "name" => "Eevee",
+        "ps" => "19",
+        "current_ps" => "19",
+        "attack" => "12",
+        "defense" => "10",
+        "speed" => "13",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/1/16/latest/20140809163205/Eevee_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/6/60/latest/20140112110125/Eevee_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/b/b7/latest/20080817214505/Eevee_icon.gif"
+    ],
+    [
+        "name" => "Porygon",
+        "ps" => "20",
+        "current_ps" => "20",
+        "attack" => "12",
+        "defense" => "15",
+        "speed" => "10",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/8/80/latest/20140111183934/Porygon_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/d/da/latest/20150321181504/Porygon_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/d/d2/latest/20091207224610/Porygon_icon.gif"
+    ],
+    [
+        "name" => "Omanyte",
+        "ps" => "18",
+        "current_ps" => "18",
+        "attack" => "14",
+        "defense" => "16",
+        "speed" => "9",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/d/d8/latest/20140215200318/Omanyte_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/2/2b/latest/20150321180939/Omanyte_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/2/26/latest/20091207224610/Omanyte_icon.gif"
+    ],
+    [
+        "name" => "Kabuto",
+        "ps" => "19",
+        "current_ps" => "19",
+        "attack" => "15",
+        "defense" => "14",
+        "speed" => "10",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/2/26/latest/20140111163915/Kabuto_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/a/a4/latest/20150321174041/Kabuto_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/8/81/latest/20091207224612/Kabuto_icon.gif"
+    ],
+    [
+        "name" => "Aerodactyl",
+        "ps" => "23",
+        "current_ps" => "23",
+        "attack" => "18",
+        "defense" => "12",
+        "speed" => "17",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/a/ad/latest/20140505212056/Aerodactyl_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/9/9c/latest/20140105151057/Aerodactyl_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/e/e4/latest/20091207224613/Aerodactyl_icon.gif"
+    ],
+    [
+        "name" => "Snorlax",
+        "ps" => "30",
+        "current_ps" => "30",
+        "attack" => "20",
+        "defense" => "17",
+        "speed" => "5",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/6/61/latest/20140215200420/Snorlax_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/4/40/latest/20150421235542/Snorlax_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/0/08/latest/20091207224614/Snorlax_icon.gif"
+    ],
+    [
+        "name" => "Dratini",
+        "ps" => "17",
+        "current_ps" => "17",
+        "attack" => "14",
+        "defense" => "12",
+        "speed" => "13",
+        "img_front" => "https://images.wikidexcdn.net/mwuploads/wikidex/7/77/latest/20140110194449/Dratini_XY.gif",
+        "img_back" => "https://images.wikidexcdn.net/mwuploads/wikidex/2/22/latest/20150321171300/Dratini_espalda_G6.gif",
+        "img_pixel" => "https://images.wikidexcdn.net/mwuploads/wikidex/0/0c/latest/20091207224455/Dratini_icon.gif"
     ]
 
 ];
